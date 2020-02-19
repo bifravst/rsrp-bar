@@ -1,3 +1,8 @@
 {
-	"extends": "@bifravst/eslint-config-typescript",
+  "extends": ["@bifravst/eslint-config-typescript", "plugin:react/recommended"],
+  "settings": {
+    "react": {
+      "version": "latest"
+    }
+  }
 }
