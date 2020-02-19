@@ -9,6 +9,7 @@
     "test": "jest"
   },
   "main": "dist/lib.js",
+  "types": "dist/index.d.ts",
   "homepage": "https://bifravst.github.io/",
   "keywords": [
     "Cloud",
