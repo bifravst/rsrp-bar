@@ -1,6 +1,10 @@
 import React from 'react'
 
-export const RSRPBar = ({ quality, ...props }: { quality: number }) => {
+export const RSRPBar = ({
+	quality,
+	bgOpacity,
+	...props
+}: { quality: number; bgOpacity?: number } & { [x: string]: any }) => {
 	// Calculate the size of the triangle base on the relative area.
 	// The resulting triangle should have the area respective to its quality,
 	// instead of only having the width/height.
@@ -14,21 +18,23 @@ export const RSRPBar = ({ quality, ...props }: { quality: number }) => {
 			height="100px"
 			width="100px"
 			aria-label={`${Math.round(quality * 100)}%`}
-			{...props}
+			{...{
+				color: 'black',
+				...props,
+			}}
 		>
 			<g>
 				<path
 					d="M 100,0 V 100 H 0 Z"
 					style={{
-						fill: '#000000',
-						fillOpacity: 0.3,
+						fill: 'currentColor',
+						fillOpacity: bgOpacity || 0.5,
 					}}
 				/>
 				<path
 					d={`M 0,100 l ${Math.round(d * 100)},0 l 0,-${Math.round(d * 100)} Z`}
 					style={{
-						fill: '#000000',
-						fillOpacity: 0.6,
+						fill: 'currentColor',
 					}}
 				/>
 			</g>

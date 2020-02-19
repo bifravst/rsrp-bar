@@ -4,6 +4,29 @@ import { RSRP } from './RSRP'
 import { RSRPBar } from './RSRPBar'
 import { dbmToRSRP } from './dbmToRSRP'
 
+const colors = [
+	'#03a8a0',
+	'#039c4b',
+	'#66d313',
+	'#fedf17',
+	'#ff0984',
+	'#21409a',
+	'#04adff',
+	'#e48873',
+	'#f16623',
+	'#f44546',
+]
+
+const color = function*() {
+	let i = 0
+	while (true) {
+		yield colors[i]
+		i = (i + 1) % colors.length
+	}
+}
+
+const colorGenerator = color()
+
 const renderForDBM = (dbm: number) => (
 	<RSRP
 		rsrp={dbmToRSRP(dbm)}
@@ -18,7 +41,12 @@ const renderForDBM = (dbm: number) => (
 			) : (
 				<>
 					<td>
-						<RSRPBar quality={quality} />
+						<RSRPBar
+							quality={quality}
+							style={{
+								color: colorGenerator.next().value,
+							}}
+						/>
 					</td>
 					<td>-</td>
 				</>
