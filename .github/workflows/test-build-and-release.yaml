@@ -33,6 +33,8 @@ jobs:
         run: npm run lint
       - name: Test
         run: npm test
+      - name: Compile
+        run: npx tsc
       - name: Build
         run: npm run build
       - name: Semantic release
