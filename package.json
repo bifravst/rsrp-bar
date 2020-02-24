@@ -3,12 +3,11 @@
   "version": "0.0.0-development",
   "description": "React component to render an RSRP bar or a failover icon in case the reported value is not valid",
   "scripts": {
-    "build": "npx webpack --config-name production",
     "lint": "eslint --ext .js,.ts,.tsx --ignore-pattern *.spec.ts src/**",
     "start": "webpack-dev-server --config-name development --open",
     "test": "jest"
   },
-  "main": "dist/lib.js",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "homepage": "https://bifravst.github.io/",
   "keywords": [
