@@ -27,7 +27,7 @@
     "url": "https://github.com/bifravst/rsrp-bar/issues"
   },
   "devDependencies": {
-    "@bifravst/code-style": "^7.1.0",
+    "@bifravst/code-style": "^7.1.1",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-angular": "^8.3.4",
     "@svgr/webpack": "^5.3.1",
