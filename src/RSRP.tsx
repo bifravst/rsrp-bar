@@ -25,7 +25,7 @@ export const RSRP = ({
 		quality: number
 	}) => React.ReactElement<any>
 	renderInvalid: () => React.ReactElement<any>
-}) => {
+}): React.ReactElement<any> => {
 	if (rsrp === 255) {
 		return renderBar({ quality: 0 })
 	}

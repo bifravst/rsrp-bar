@@ -4,7 +4,9 @@ export const RSRPBar = ({
 	quality,
 	bgOpacity,
 	...props
-}: { quality: number; bgOpacity?: number } & { [x: string]: any }) => {
+}: { quality: number; bgOpacity?: number } & {
+	[x: string]: any
+}): React.ReactElement<SVGSVGElement> => {
 	// Calculate the size of the triangle base on the relative area.
 	// The resulting triangle should have the area respective to its quality,
 	// instead of only having the width/height.
@@ -28,7 +30,7 @@ export const RSRPBar = ({
 					d="M 100,0 V 100 H 0 Z"
 					style={{
 						fill: 'currentColor',
-						fillOpacity: bgOpacity || 0.5,
+						fillOpacity: bgOpacity ?? 0.5,
 					}}
 				/>
 				<path

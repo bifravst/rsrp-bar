@@ -1,1 +1,1 @@
-export const dbmToRSRP = (dbm: number) => dbm + 140
+export const dbmToRSRP = (dbm: number): number => dbm + 140
