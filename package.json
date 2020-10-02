@@ -34,7 +34,7 @@
     "@types/jest": "26.0.14",
     "@types/react": "16.9.50",
     "@types/react-dom": "16.9.8",
-    "eslint-plugin-react": "7.21.2",
+    "eslint-plugin-react": "7.21.3",
     "husky": "4.3.0",
     "jest": "26.4.2",
     "source-map-loader": "1.1.0",
