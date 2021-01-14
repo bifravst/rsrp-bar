@@ -16,7 +16,7 @@ value is not valid.
 
 ## Installation
 
-    npm i --save-dev @bifravst/rsrp-bar
+    npm i --save @bifravst/rsrp-bar
 
 ## Usage
 
