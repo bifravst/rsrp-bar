@@ -17,7 +17,7 @@ const colors = [
 	'#f44546',
 ]
 
-const color = function*() {
+const color = function* () {
 	let i = 0
 	while (true) {
 		yield colors[i]
