@@ -10,6 +10,7 @@
   },
   "type": "module",
   "exports": "./dist/index.js",
+  "module": "./dist/index.js",
   "types": "dist/index.d.ts",
   "homepage": "https://bifravst.github.io/",
   "keywords": [
