@@ -5,7 +5,6 @@
     "outDir": "dist/",
     "jsx": "react",
     "lib": ["DOM", "ES5"],
-    "target": "es2018",
-    "esModuleInterop": true
+    "allowSyntheticDefaultImports": true
   }
 }

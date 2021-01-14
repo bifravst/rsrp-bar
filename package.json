@@ -7,7 +7,8 @@
     "start": "webpack serve",
     "test": "jest"
   },
-  "main": "dist/index.js",
+  "type": "module",
+  "exports": "./dist/index.js",
   "types": "dist/index.d.ts",
   "homepage": "https://bifravst.github.io/",
   "keywords": [
@@ -27,7 +28,7 @@
     "url": "https://github.com/bifravst/rsrp-bar/issues"
   },
   "devDependencies": {
-    "@bifravst/code-style": "8.0.134",
+    "@bifravst/code-style": "^9.0.0-use-esm.2",
     "@bifravst/eslint-config-typescript": "5.0.87",
     "@commitlint/cli": "11.0.0",
     "@commitlint/config-angular": "11.0.0",
@@ -54,6 +55,7 @@
       "pre-commit": "lint-staged && npm test"
     }
   },
+  "prettier": "@bifravst/code-style/.prettierrc.cjs",
   "lint-staged": {
     "*.{ts,tsx}": [
       "prettier --write",
