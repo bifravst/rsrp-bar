@@ -1,8 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { RSRP } from './RSRP'
-import { RSRPBar } from './RSRPBar'
-import { dbmToRSRP } from './dbmToRSRP'
+import { RSRP, RSRPBar, dbmToRSRP } from '@bifravst/rsrp-bar'
 
 const colors = [
 	'#03a8a0',
