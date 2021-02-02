@@ -1,3 +1,6 @@
+> **:truck: moved to https://github.com/NordicSemiconductor/rsrp-bar-js**  
+> :information_source: [more info](https://github.com/bifravst/bifravst/issues/56)
+
 # RSRP Bar [![npm version](https://img.shields.io/npm/v/@bifravst/rsrp-bar.svg)](https://www.npmjs.com/package/@bifravst/rsrp-bar)
 
 ![Test, Build and Release](https://github.com/bifravst/rsrp-bar/workflows/Test,%20Build%20and%20Release/badge.svg)
