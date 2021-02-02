@@ -1,5 +1,5 @@
 {
-  "extends": "@bifravst/code-style/tsconfig.json",
+  "extends": "@nordicsemiconductor/asset-tracker-cloud-code-style/tsconfig.json",
   "include": ["src/*.tsx", "src/*.ts"],
   "compilerOptions": {
     "outDir": "dist/",
