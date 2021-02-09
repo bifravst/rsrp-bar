@@ -3,7 +3,7 @@ pull_request_rules:
     conditions:
       - author~=^(snyk-bot|dependabot\[bot\]|renovate\[bot\])$
       - status-success=security/snyk (Asset Tracker Cloud)
-      - status-success=tests
+      - status-success=build
     actions:
       merge:
         method: rebase
