@@ -83,20 +83,7 @@
     "npm": ">=7.0.0"
   },
   "jest": {
-    "testURL": "http://localhost",
-    "moduleFileExtensions": [
-      "ts",
-      "js",
-      "json"
-    ],
-    "transform": {
-      ".+\\.tsx?$": "ts-jest"
-    },
-    "testRegex": ".+\\.spec\\.ts$",
-    "globals": {
-      "ts-jest": {
-        "diagnostics": true
-      }
-    }
+    "preset": "ts-jest",
+    "testRegex": ".+.spec.ts$"
   }
 }
