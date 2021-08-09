@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const RSRPBar = ({
+export const SignalQualityTriangle = ({
 	quality,
 	bgOpacity,
 	...props

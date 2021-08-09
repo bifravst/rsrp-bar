@@ -1,38 +1,34 @@
 import React from 'react'
-import { rsrpToPercent } from './rsrpToPercent'
+import { dbmToPercent } from './dbmToPercent'
 
 /**
  * Renders the Reference Signal Received Power (RSRP).
  *
  * RSRP is the average power level received from a single reference signal in an LTE (Long-term Evolution) network.
  *
- * 0: RSRP < −140 dBm
- * 1: – When −140 dBm ≤ RSRP < −139 dBm
- * 2: When −139 dBm ≤ RSRP < −138 dBm
- * ..95: When −46 dBm ≤ RSRP < −45 dBm
- * 96: When −45 dBm ≤ RSRP < −44 dBm
- * 97: When −44 dBm ≤ RSRP
- * 255: Not known or not detectable
+ * Valid dBm values are typically between -140 and -40 dBm
  */
 export const RSRP = ({
-	rsrp,
+	dbm,
 	renderBar,
 	renderInvalid,
+	minValid,
+	maxValid,
 }: {
-	rsrp: number
-	renderBar: (args: {
-		dbm?: number
-		quality: number
-	}) => React.ReactElement<any>
+	dbm: number
+	renderBar: (args: { dbm: number; quality: number }) => React.ReactElement<any>
 	renderInvalid: () => React.ReactElement<any>
+	minValid?: number
+	maxValid?: number
 }): React.ReactElement<any> => {
-	if (rsrp === 255) {
-		return renderBar({ quality: 0 })
+	const min = minValid ?? -140
+	const max = maxValid ?? -40
+	if (dbm < min) {
+		return renderBar({ quality: 0, dbm })
 	}
 
-	if (rsrp >= 0 && rsrp <= 140) {
-		const dbm = -140 + rsrp
-		const quality = rsrpToPercent(dbm)
+	if (dbm >= min && dbm <= max) {
+		const quality = dbmToPercent({ dbm, min, max })
 		return renderBar({ quality, dbm })
 	}
 	return renderInvalid()
