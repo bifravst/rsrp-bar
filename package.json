@@ -78,8 +78,8 @@
     "access": "public"
   },
   "engines": {
-    "node": ">=16.0.0",
-    "npm": ">=7.0.0"
+    "node": "16",
+    "node": "7"
   },
   "jest": {
     "preset": "ts-jest",
