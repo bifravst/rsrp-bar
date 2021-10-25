@@ -32,7 +32,7 @@
     "@nordicsemiconductor/asset-tracker-cloud-code-style": "9.2.1",
     "@svgr/webpack": "5.5.0",
     "@types/jest": "27.0.2",
-    "@types/react": "17.0.31",
+    "@types/react": "17.0.32",
     "@types/react-dom": "17.0.10",
     "eslint-plugin-react": "7.26.1",
     "jest": "27.3.1",
