@@ -29,7 +29,7 @@
     "url": "https://github.com/NordicSemiconductor/rsrp-bar-js/issues"
   },
   "devDependencies": {
-    "@nordicsemiconductor/asset-tracker-cloud-code-style": "10.0.2",
+    "@nordicsemiconductor/asset-tracker-cloud-code-style": "10.0.3",
     "@svgr/webpack": "6.1.2",
     "@types/jest": "27.0.3",
     "@types/react": "17.0.38",
