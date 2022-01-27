@@ -15,7 +15,7 @@ value is not valid.
 
 ## Installation
 
-    npm i --save-dev @nordicsemiconductor/rsrp-bar
+    npm i --save-dev --save-exact @nordicsemiconductor/rsrp-bar
 
 ## Usage
 
