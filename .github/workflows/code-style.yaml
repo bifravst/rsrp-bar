@@ -33,19 +33,25 @@ jobs:
       - name: Compile TypeScript
         run: npx tsc
 
+      - name: Check source code with eslint
+        run: npx eslint --fix --ext .js,.ts,.jsx,.tsx ./
+
       - name: Format source code with prettier
         run: npx prettier --write ./
 
-      - name: Check source code with eslint
-        run: npx eslint --fix --ext .js,.ts,.jsx,.tsx ./
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: |
+          echo "$GITHUB_CONTEXT"
 
       - name: Commit changes
         run: |
           if ! git diff --exit-code --name-only; then
             echo "machine github.com login accesskey password ${{ secrets.GITHUB_TOKEN }}" > ~/.netrc
-            git config --global user.email "actions@example.com"
-            git config --global user.name "GitHub Actions"
+            git config --global user.email ${{ github.event.head_commit.author.email }}
+            git config --global user.name "${{ github.event.head_commit.author.name }}"
             git add -A
-            git commit -m "style: ensure source code is properly formatted"
+            git commit -m "style: auto-format source code"
             git push origin HEAD:${{ github.event.pull_request.head.ref }}
           fi
