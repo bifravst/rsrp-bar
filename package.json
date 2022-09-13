@@ -6,9 +6,7 @@
     "lint": "eslint --ext .js,.ts,.tsx src/**",
     "start": "webpack serve",
     "test": "jest",
-    "postinstall": "husky install",
-    "prepublishOnly": "pinst --disable",
-    "postpublish": "pinst --enable"
+    "prepare": "husky install"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
