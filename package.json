@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "@nordicsemiconductor/asset-tracker-cloud-code-style": "11.0.129",
-    "@svgr/webpack": "6.3.1",
+    "@svgr/webpack": "6.4.0",
     "@swc/jest": "0.2.23",
     "@types/jest": "29.1.1",
     "@types/react": "18.0.21",
