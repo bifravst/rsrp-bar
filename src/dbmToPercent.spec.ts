@@ -1,7 +1,9 @@
-import { dbmToPercent } from './dbmToPercent'
+import { dbmToPercent } from './dbmToPercent.js'
+import assert from 'node:assert/strict'
+import { describe, it } from 'node:test'
 
-describe('dbmToPercent', () => {
-	it.each([
+void describe('dbmToPercent', () => {
+	for (const [dbm, percent] of [
 		[-150, 0],
 		[-140, 0],
 		[-115, 25],
@@ -9,7 +11,8 @@ describe('dbmToPercent', () => {
 		[-65, 75],
 		[-40, 100],
 		[-30, 100],
-	])('%i: %i%%', (dbm, percent) => {
-		expect(dbmToPercent({ dbm, min: -140, max: -40 }) * 100).toEqual(percent)
-	})
+	] as [number, number][]) {
+		void it(`%${dbm}: ${percent}%`, () =>
+			assert.equal(dbmToPercent({ dbm, min: -140, max: -40 }) * 100, percent))
+	}
 })

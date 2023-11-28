@@ -1,7 +1,7 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import { RSRP } from './RSRP'
-import { SignalQualityTriangle } from './SignalQualityTriangle'
+import { RSRP } from './RSRP.js'
+import { SignalQualityTriangle } from './SignalQualityTriangle.js'
+import { createRoot } from 'react-dom/client'
 
 const colors = [
 	'#03a8a0',
@@ -51,26 +51,29 @@ const renderForDBM = (dbm: number) => (
 	/>
 )
 
-ReactDOM.render(
-	<table>
-		<thead>
-			<tr>
-				<th>dbm</th>
-				<th>icon</th>
-				<th>info</th>
-			</tr>
-		</thead>
-		<tbody>
-			{[
-				1000, 100, 10, -0, -40, -50, -60, -70, -80, -90, -100, -110, -120, -130,
-				-140, -150, -200, -1000,
-			].map((dbm, key) => (
-				<tr key={key}>
-					<td>{dbm}</td>
-					{renderForDBM(dbm)}
+const container = document.querySelector('#root')
+if (container !== null) {
+	const root = createRoot(container)
+	root.render(
+		<table>
+			<thead>
+				<tr>
+					<th>dbm</th>
+					<th>icon</th>
+					<th>info</th>
 				</tr>
-			))}
-		</tbody>
-	</table>,
-	document.querySelector('#root'),
-)
+			</thead>
+			<tbody>
+				{[
+					1000, 100, 10, -0, -40, -50, -60, -70, -80, -90, -100, -110, -120,
+					-130, -140, -150, -200, -1000,
+				].map((dbm, key) => (
+					<tr key={key}>
+						<td>{dbm}</td>
+						{renderForDBM(dbm)}
+					</tr>
+				))}
+			</tbody>
+		</table>,
+	)
+}
