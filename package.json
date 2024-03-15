@@ -39,7 +39,7 @@
     "@types/react-dom": "18.2.22",
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-react-swc": "^3.6.0",
-    "eslint-plugin-react": "7.34.0",
+    "eslint-plugin-react": "7.34.1",
     "husky": "9.0.11",
     "source-map-loader": "5.0.0",
     "ts-loader": "9.5.1",
