@@ -37,7 +37,7 @@
     "@swc/register": "0.1.10",
     "@types/react": "18.2.74",
     "@types/react-dom": "18.2.24",
-    "@typescript-eslint/parser": "^7.5.0",
+    "@typescript-eslint/parser": "^7.6.0",
     "@vitejs/plugin-react-swc": "^3.6.0",
     "eslint-plugin-react": "7.34.1",
     "husky": "9.0.11",
