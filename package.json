@@ -78,8 +78,7 @@
   },
   "files": [
     "README.md",
-    "dist",
-    "package-lock.json"
+    "dist"
   ],
   "publishConfig": {
     "access": "public"
