@@ -35,8 +35,8 @@
     "@bifravst/prettier-config": "1.0.0",
     "@commitlint/config-conventional": "19.2.2",
     "@swc/register": "0.1.10",
-    "@types/react": "18.2.79",
-    "@types/react-dom": "18.2.25",
+    "@types/react": "18.3.0",
+    "@types/react-dom": "18.3.0",
     "@typescript-eslint/parser": "^7.7.1",
     "@vitejs/plugin-react-swc": "^3.6.0",
     "eslint-plugin-react": "7.34.1",
@@ -55,8 +55,8 @@
     ]
   },
   "dependencies": {
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react": "18.3.0",
+    "react-dom": "18.3.0"
   },
   "release": {
     "branches": [
