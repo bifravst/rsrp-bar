@@ -45,7 +45,7 @@
     "lint-staged": "15.2.7",
     "source-map-loader": "5.0.0",
     "ts-loader": "9.5.1",
-    "tsx": "4.15.2",
+    "tsx": "4.15.4",
     "vite": "5.2.13"
   },
   "lint-staged": {
