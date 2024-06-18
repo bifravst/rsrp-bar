@@ -16,7 +16,7 @@
       "node": "./dist/index.js"
     }
   },
-  "homepage": "https://nordicsemiconductor.github.io/asset-tracker-cloud-docs/",
+  "homepage": "https://docs.nordicsemi.com/bundle/nrf-asset-tracker-saga/",
   "keywords": [
     "nrf-asset-tracker",
     "iot"
