@@ -6,7 +6,8 @@
     "lint": "eslint src/**",
     "test": "npx tsx --test ./src/*.spec.ts",
     "prepare": "husky",
-    "start": "vite"
+    "start": "vite",
+    "prepublishOnly": "npx tsc"
   },
   "type": "module",
   "typings": "dist/index.d.ts",
@@ -16,9 +17,10 @@
       "node": "./dist/index.js"
     }
   },
-  "homepage": "https://docs.nordicsemi.com/bundle/nrf-asset-tracker-saga/",
+  "homepage": "https://github.com/bifravst/rsrp-bar",
   "keywords": [
-    "nrf-asset-tracker",
+    "rsrp",
+    "react",
     "iot"
   ],
   "author": "Nordic Semiconductor ASA | nordicsemi.no",
