@@ -1,4 +1,4 @@
-# RSRP Bar [![npm version](https://img.shields.io/npm/v/@nordicsemiconductor/rsrp-bar.svg)](https://www.npmjs.com/package/@nordicsemiconductor/rsrp-bar)
+# RSRP Bar [![npm version](https://img.shields.io/npm/v/rsrp-bar/rsrp-bar.svg)](https://www.npmjs.com/package/rsrp-bar/rsrp-bar)
 
 ![Test, Build and Release](https://github.com/bifravst/rsrp-bar/workflows/Test,%20Build%20and%20Release/badge.svg)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
@@ -14,7 +14,7 @@ value is not valid.
 
 ## Installation
 
-    npm i --save-dev --save-exact @nordicsemiconductor/rsrp-bar
+    npm i --save-dev --save-exact rsrp-bar/rsrp-bar
 
 ## Usage
 
