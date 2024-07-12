@@ -26,5 +26,4 @@ jobs:
       - name: Compile
         run: npx tsc
       - name: Semantic release
-        continue-on-error: true
         run: npx semantic-release
