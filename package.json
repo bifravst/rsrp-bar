@@ -1,5 +1,5 @@
 {
-  "name": "@nordicsemiconductor/rsrp-bar",
+  "name": "@bifravst/rsrp-bar",
   "version": "0.0.0-development",
   "description": "React component to render an RSRP bar or a failover icon in case the reported value is not valid",
   "scripts": {
@@ -25,10 +25,10 @@
   "license": "BSD-3-Clause",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NordicSemiconductor/rsrp-bar-js.git"
+    "url": "git+https://github.com/bifravst/rsrp-bar.git"
   },
   "bugs": {
-    "url": "https://github.com/NordicSemiconductor/rsrp-bar-js/issues"
+    "url": "https://github.com/bifravst/rsrp-bar/issues"
   },
   "devDependencies": {
     "@bifravst/eslint-config-typescript": "6.1.9",
