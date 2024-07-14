@@ -41,10 +41,12 @@
     "@types/react-dom": "18.3.0",
     "@typescript-eslint/parser": "^7.16.0",
     "@vitejs/plugin-react-swc": "^3.7.0",
+    "cat": "*",
     "commitlint": "19.3.0",
     "eslint-plugin-react": "7.34.4",
     "husky": "9.0.11",
     "lint-staged": "15.2.7",
+    "package.json": "*",
     "source-map-loader": "5.0.0",
     "ts-loader": "9.5.1",
     "tsx": "4.16.2",
@@ -92,5 +94,9 @@
     "node": ">=20",
     "npm": ">=10"
   },
-  "prettier": "@bifravst/prettier-config"
+  "prettier": "@bifravst/prettier-config",
+  "peerDependencies": {
+    "cat": "^0.2.0",
+    "package.json": "^2.0.1"
+  }
 }
