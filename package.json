@@ -39,7 +39,7 @@
     "@swc/register": "0.1.10",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
-    "@typescript-eslint/parser": "^7.16.1",
+    "@typescript-eslint/parser": "^7.17.0",
     "@vitejs/plugin-react-swc": "^3.7.0",
     "commitlint": "19.3.0",
     "eslint-plugin-react": "7.35.0",
