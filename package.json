@@ -43,7 +43,7 @@
     "@vitejs/plugin-react-swc": "^3.7.0",
     "commitlint": "19.5.0",
     "eslint-plugin-react": "7.35.2",
-    "husky": "9.1.5",
+    "husky": "9.1.6",
     "lint-staged": "15.2.10",
     "source-map-loader": "5.0.0",
     "ts-loader": "9.5.1",
