@@ -38,7 +38,7 @@
     "@commitlint/config-conventional": "19.6.0",
     "@swc/register": "0.1.10",
     "@types/react": "18.3.14",
-    "@types/react-dom": "18.3.2",
+    "@types/react-dom": "18.3.3",
     "@vitejs/plugin-react-swc": "^3.7.2",
     "commitlint": "19.6.0",
     "eslint-plugin-react": "7.37.2",
