@@ -43,7 +43,7 @@
     "commitlint": "19.6.0",
     "eslint-plugin-react": "7.37.2",
     "husky": "9.1.7",
-    "lint-staged": "15.2.10",
+    "lint-staged": "15.2.11",
     "source-map-loader": "5.0.0",
     "ts-loader": "9.5.1",
     "tsx": "4.19.2",
