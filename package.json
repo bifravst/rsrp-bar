@@ -39,7 +39,7 @@
     "@swc/register": "0.1.10",
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
-    "@vitejs/plugin-react-swc": "^3.7.2",
+    "@vitejs/plugin-react-swc": "^3.8.0",
     "commitlint": "19.7.1",
     "eslint-plugin-react": "7.37.4",
     "husky": "9.1.7",
