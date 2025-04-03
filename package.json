@@ -41,7 +41,7 @@
     "@types/react-dom": "19.1.1",
     "@vitejs/plugin-react-swc": "^3.8.1",
     "commitlint": "19.8.0",
-    "eslint-plugin-react": "7.37.4",
+    "eslint-plugin-react": "7.37.5",
     "husky": "9.1.7",
     "lint-staged": "15.5.0",
     "source-map-loader": "5.0.0",
