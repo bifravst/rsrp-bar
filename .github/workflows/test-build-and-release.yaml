@@ -24,6 +24,6 @@ jobs:
       - name: Test
         run: npm test
       - name: Compile
-        run: npx tsc
+        run: npx tsgo
       - name: Semantic release
         run: npx semantic-release
