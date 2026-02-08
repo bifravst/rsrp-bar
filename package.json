@@ -39,7 +39,7 @@
     "@swc/register": "0.1.10",
     "@types/react": "19.2.11",
     "@types/react-dom": "19.2.3",
-    "@typescript/native-preview": "7.0.0-dev.20260204.1",
+    "@typescript/native-preview": "7.0.0-dev.20260205.1",
     "@vitejs/plugin-react-swc": "^4.2.3",
     "commitlint": "20.4.1",
     "eslint-plugin-react": "7.37.5",
