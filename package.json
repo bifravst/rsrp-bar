@@ -40,7 +40,7 @@
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "@typescript/native-preview": "7.0.0-dev.20260309.1",
-    "@vitejs/plugin-react-swc": "^4.3.0",
+    "@vitejs/plugin-react-swc": "^4.3.1",
     "commitlint": "20.5.3",
     "eslint-plugin-react": "7.37.5",
     "husky": "9.1.7",
