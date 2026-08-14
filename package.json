@@ -45,7 +45,7 @@
     "commitlint": "20.5.3",
     "eslint-plugin-react": "7.37.5",
     "husky": "9.1.7",
-    "lint-staged": "16.4.0",
+    "lint-staged": "17.3.0",
     "source-map-loader": "5.0.0",
     "ts-loader": "9.6.2",
     "tsx": "4.23.12",
