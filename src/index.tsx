@@ -1,3 +1,3 @@
-export * from './RSRP.js'
-export * from './SignalQualityTriangle.js'
-export * from './dbmToPercent.js'
+export * from './dbmToPercent.ts'
+export * from './RSRP.ts'
+export * from './SignalQualityTriangle.ts'

@@ -3,8 +3,12 @@ name: Test, Build and Release
 on: push
 
 env:
-  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+permissions:
+  contents: write
+  issues: write
+  id-token: write
 
 jobs:
   build:
@@ -13,12 +17,10 @@ jobs:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
       - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
         with:
-          node-version: "24.x"
+          node-version: ">=24.19.0 <25"
           cache: "npm"
       - name: Install NPM version specified in package.json
         uses: ./.github/actions/install-npm
-      - name: Authenticate with NPM registry
-        run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
       - name: Install dependencies
         run: npm ci --no-audit
       - name: Lint
@@ -26,6 +28,6 @@ jobs:
       - name: Test
         run: npm test
       - name: Compile
-        run: npx tsgo
+        run: npx tsc
       - name: Semantic release
         run: npx semantic-release

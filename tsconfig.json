@@ -12,12 +12,16 @@
     "noFallthroughCasesInSwitch": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": true,
-    "outDir": "dist/",
+    "outDir": "./dist/",
     "jsx": "react",
     "lib": ["DOM", "ES5"],
     "target": "esnext",
     "module": "nodenext",
     "moduleResolution": "nodenext",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "rootDir": "./src",
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true,
+    "types": ["node"]
   }
 }

@@ -4,17 +4,17 @@
   "description": "React component to render an RSRP bar or a failover icon in case the reported value is not valid",
   "scripts": {
     "lint": "eslint src/**",
-    "test": "npx tsx --test ./src/*.spec.ts",
+    "test": "node --experimental-transform-types --no-warnings --test ./src/*.spec.ts",
     "prepare": "husky && case \"$npm_command\" in install|ci) check-node-version --package ;; esac",
     "start": "vite",
-    "prepublishOnly": "npx tsgo"
+    "prepublishOnly": "npx tsc"
   },
   "type": "module",
-  "typings": "dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.js",
-      "node": "./dist/index.js"
+      "node": "./dist/index.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "homepage": "https://github.com/bifravst/rsrp-bar",
@@ -33,23 +33,23 @@
     "url": "https://github.com/bifravst/rsrp-bar/issues"
   },
   "devDependencies": {
-    "@bifravst/eslint-config-typescript": "6.4.4",
-    "@bifravst/prettier-config": "1.1.17",
-    "@commitlint/config-conventional": "20.5.3",
+    "@bifravst/eslint-config-typescript": "8.0.0",
+    "@bifravst/prettier-config": "2.0.0",
+    "@commitlint/config-conventional": "21.2.2",
     "@swc/register": "0.1.10",
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.4",
-    "@typescript/native-preview": "7.0.0-dev.20260309.1",
+    "@typescript/native": "npm:typescript@7.0.2",
     "@vitejs/plugin-react-swc": "^4.3.3",
     "check-node-version": "4.2.1",
-    "commitlint": "20.5.3",
+    "commitlint": "21.2.2",
     "eslint-plugin-react": "7.37.5",
     "husky": "9.1.7",
-    "lint-staged": "16.4.0",
+    "lint-staged": "17.3.0",
     "source-map-loader": "5.0.0",
     "ts-loader": "9.6.2",
-    "tsx": "4.23.12",
-    "vite": "7.3.6"
+    "typescript": "npm:@typescript/typescript6@6.0.2",
+    "vite": "8.2.1"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
@@ -90,7 +90,7 @@
     "access": "public"
   },
   "engines": {
-    "node": ">=22",
+    "node": ">=24.19.0 <25",
     "npm": ">=12.0.2 <13"
   },
   "prettier": "@bifravst/prettier-config"

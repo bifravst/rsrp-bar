@@ -1,5 +1,5 @@
 import type React from 'react'
-import { dbmToPercent } from './dbmToPercent.js'
+import { dbmToPercent } from './dbmToPercent.ts'
 
 /**
  * Renders the Reference Signal Received Power (RSRP).

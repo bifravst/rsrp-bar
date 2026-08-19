@@ -1,7 +1,7 @@
 import React from 'react'
-import { RSRP } from './RSRP.js'
-import { SignalQualityTriangle } from './SignalQualityTriangle.js'
 import { createRoot } from 'react-dom/client'
+import { RSRP } from './RSRP.ts'
+import { SignalQualityTriangle } from './SignalQualityTriangle.ts'
 
 const colors = [
 	'#03a8a0',

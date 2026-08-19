@@ -1,6 +1,6 @@
-import { dbmToPercent } from './dbmToPercent.js'
 import assert from 'node:assert/strict'
 import { describe, it } from 'node:test'
+import { dbmToPercent } from './dbmToPercent.ts'
 
 void describe('dbmToPercent', () => {
 	for (const [dbm, percent] of [
