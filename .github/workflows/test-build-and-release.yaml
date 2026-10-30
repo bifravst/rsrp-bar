@@ -11,13 +11,18 @@ permissions:
   id-token: write
 
 jobs:
-  build:
+  build-matrix:
     runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        node-version:
+          - ">=24.22.1 <25"
+          - ">=26.12.1 <27"
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
-          node-version: "<27"
+          node-version: ${{ matrix.node-version }}
           cache: "npm"
       - name: Install NPM version specified in package.json
         uses: ./.github/actions/install-npm
@@ -27,6 +32,34 @@ jobs:
         run: npm run lint
       - name: Test
         run: npm test
+      - name: Compile
+        run: npx tsc
+
+  build:
+    runs-on: ubuntu-latest
+    needs: [build-matrix]
+    # Stable required status check for the repository rules, independent of
+    # the Node.js versions in the matrix.
+    if: ${{ always() }}
+    steps:
+      - name: All builds must have succeeded
+        env:
+          RESULT: ${{ needs.build-matrix.result }}
+        run: test "$RESULT" = "success"
+
+  release:
+    runs-on: ubuntu-24.04
+    needs: [build]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: ">=26.12.1 <27"
+          cache: "npm"
+      - name: Install NPM version specified in package.json
+        uses: ./.github/actions/install-npm
+      - name: Install dependencies
+        run: npm ci --no-audit
       - name: Compile
         run: npx tsc
       - name: Semantic release
